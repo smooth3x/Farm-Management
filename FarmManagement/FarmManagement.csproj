@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D422C35-785E-476F-BCEE-6FD0E58715AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FarmManagement</RootNamespace>
+    <AssemblyName>FarmManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Building.cs" />
+    <Compile Include="Classes\Farm.cs" />
+    <Compile Include="Classes\Save.cs" />
+    <Compile Include="LoadApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadApp.Designer.cs">
+      <DependentUpon>LoadApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainApp.Designer.cs">
+      <DependentUpon>MainApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\Map.cs" />
+    <EmbeddedResource Include="LoadApp.resx">
+      <DependentUpon>LoadApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainApp.resx">
+      <DependentUpon>MainApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tooltip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipPen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipStable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipCowshed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipHen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipLemon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipCarrot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipPotato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background_darker.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipMint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UploadImage.png" />
+    <None Include="Resources\V-Icon.png" />
+    <None Include="Resources\MenuBG.jpg" />
+    <None Include="Resources\Mint.png" />
+    <None Include="Resources\Potato.png" />
+    <None Include="Resources\Lemon.png" />
+    <None Include="Resources\Orange.png" />
+    <None Include="Resources\Wool.png" />
+    <None Include="Resources\Eggs.png" />
+    <None Include="Resources\Milk.png" />
+    <None Include="Resources\tipLemon_hover.png" />
+    <None Include="Resources\tipOrange_hover.png" />
+    <None Include="Resources\tipMint_hover.png" />
+    <None Include="Resources\tipHay_hover.png" />
+    <None Include="Resources\tipGarage_hover.png" />
+    <None Include="Resources\tipTractor_hover.png" />
+    <None Include="Resources\tipLawnMower_hover.png" />
+    <None Include="Resources\tipTender_hover.png" />
+    <None Include="Resources\tipStable_hover.png" />
+    <None Include="Resources\tipCowshed_hover.png" />
+    <None Include="Resources\tipPen_hover.png" />
+    <None Include="Resources\tipHen_hover.png" />
+    <None Include="Resources\tipPotato_hover.png" />
+    <None Include="Resources\tipCarrot_hover.png" />
+    <None Include="Resources\bg.jpg" />
+    <None Include="Resources\bg-loadapp.jpg" />
+    <None Include="Resources\Carrot.png" />
+    <None Include="Resources\Click.png" />
+    <None Include="Resources\AppIcon.ico" />
+    <None Include="Resources\bg_load.png" />
+    <Content Include="Resources\FarmLogo1.png" />
+    <Content Include="Resources\UploadIcon.png" />
+    <Content Include="Resources\CurCarrot.cur" />
+    <Content Include="Resources\CurHen.cur" />
+    <Content Include="Resources\CurCowshed.cur" />
+    <None Include="Resources\CurHay.cur" />
+    <None Include="Resources\CurGarage.cur" />
+    <Content Include="Resources\CurStable.cur" />
+    <None Include="Resources\CurLawnMower.cur" />
+    <Content Include="Resources\CurLemon.cur" />
+    <Content Include="Resources\CurMint.cur" />
+    <Content Include="Resources\CurOrange.cur" />
+    <Content Include="Resources\CurPotato.cur" />
+    <Content Include="Resources\CurPen.cur" />
+    <None Include="Resources\CurTender.cur" />
+    <None Include="Resources\CurTractor.cur" />
+    <Content Include="Resources\Delete_Icon.png" />
+    <None Include="Resources\tipTender.png" />
+    <None Include="Resources\tipGarage.png" />
+    <None Include="Resources\tipTractor.png" />
+    <None Include="Resources\tipHay.png" />
+    <None Include="Resources\tipLawnMower.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
